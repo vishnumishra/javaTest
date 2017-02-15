@@ -12,7 +12,6 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.File;
-import java.util.Arrays;
 import java.util.Scanner;
 
 import static java.lang.Integer.parseInt;
@@ -129,7 +128,6 @@ public class App {
                     String userInput = userInput("Please enter the new word followed by its meaning:");
 
                     String[] parts = userInput.split("\\s+",2);
-                    System.out.println(Arrays.toString(parts));
 
                     String result2= insertWord(parts[0],parts[1],doc, fileName);
 
@@ -140,7 +138,7 @@ public class App {
                     System.exit(0);
             }
             String userChoice = userInput("Please enter to continue");
-            System.out.println(userChoice.equals(""));
+            userChoice.equals("");
 
             //when enter key press
             if(userChoice.equals("")){
